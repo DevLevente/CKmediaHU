@@ -1,0 +1,136 @@
+.about-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: linear-gradient(to left, #887347, #202930 35% 65%, #887347 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.intro-text {
+    background: transparent;
+    color: white;
+    padding: 20px;
+    font-size: 1.7rem;
+    text-align: justify;
+    text-align: center;
+}
+
+.intro-text h1, .intro-text h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #D4AA51;
+    text-align: center;
+}
+
+.intro-text h2 {
+    color: #D4AA51;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    align-items: center;
+
+}
+.card-text{
+    color: white;
+}
+.card-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 220px;
+    margin: 10px;
+}
+
+.card {
+    position: relative;
+    max-height: fit-content;
+    max-width: fit-content;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-img {
+    backface-visibility: hidden;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.card-img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .card-container {
+        height: auto;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card {
+        max-height: none;
+        width: 100%;
+    }
+
+    .intro-text h1, .intro-text h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 421px) {
+
+    #mission {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+}

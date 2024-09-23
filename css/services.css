@@ -1,0 +1,239 @@
+
+.main{
+    width: 100%;
+    margin: auto;
+}
+
+/* 
+.row{
+    margin: auto;
+    gap: 20px;
+    max-width: 1120px;
+    width: 100%;
+} */
+
+
+.carousel{
+    max-width:700px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+}
+
+.carousel-card{
+    width: 360px;
+    height: 640px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+
+
+
+/* RÉGI */
+
+.card{
+    margin-bottom: 50px!important;
+    width: 360px;
+    height: 640px;
+    background-color: #D4AA51;
+    flex-direction: row;
+    /* transition: width 0.5s ease-out; */
+}
+
+
+
+
+.card-video-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+    margin: auto;
+}
+
+.card-video{
+    width: 270px;
+    height: 480px;
+    border: none;
+}
+
+video{
+    border: 1px solid black;
+}
+
+/* modal */
+
+.modal{
+    color: white;
+    border: unset;
+    --bs-modal-header-border-color: #D4AA51;
+}
+
+.modal-content{
+    max-width: unset;
+    background-color: #333;
+    border: unset;
+    margin-bottom: 50px;
+    margin-top: unset;
+    padding-top: unset;
+    
+}
+
+#modal-card{
+    max-height: 927px;
+    margin-top: 52.5px;
+    padding-right: unset!important;
+}
+
+.modal-dialog{
+    max-width: unset;
+    max-height: 927px;
+}
+
+.modal-btn{
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 23px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-btn:hover{
+    background-color: #444;
+    transition: 0.5s;
+}
+
+.modal-open{
+    padding-right: 0!important;
+}
+
+#modal-video{
+    width: 360px;
+    height: 640px;
+    margin-left: 10px;
+}
+
+#modal-img{
+    width: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-right: 0;
+    padding-left: 0;
+    margin: auto;
+}
+
+.modal-body p{
+    text-align: center;
+}
+
+.modal-text{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.modal-text{
+}
+
+.modal-backdrop {
+    z-index: -1;
+}
+
+
+
+/* repsonsive */
+
+@media (max-width: 1399px) {
+    .card-content{
+        width: 66%!important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .card-content{
+        width: 360px!important;
+    }
+
+    .row{
+        width: 740px;
+    }
+
+    .card-content{
+        width: 380px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .row{
+        width: 360px;
+    }
+
+    .modal-body{
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .ures{
+        height: 45px;
+    }
+
+    #modal-card{
+        margin-top: 45px;
+    }
+
+    .modal-dialog{
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-content{
+        width: 90%;
+    }
+}
+
+
+@media (max-width:576px) {
+    .modal-card{
+        margin-left: 5px!important;
+        margin-right: 5px!important;
+    }
+    .carousel-card{
+        width: 100%;
+    }
+}
+
+/* anim */
+
+.slide-out-left{
+    animation: slideOutToLeft 1s ease-out;
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+

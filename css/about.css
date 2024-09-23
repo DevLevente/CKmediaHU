@@ -9,16 +9,6 @@
     justify-content: center;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 .intro-text {
@@ -110,12 +100,26 @@
     .card-container {
         height: auto;
         width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
         align-items: center;
     }
 
     .card {
-        max-height: none;
+        height: auto;
         width: 100%;
+        max-width: 300px;
+        transform: none;
+    }
+
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+
+    .card-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .intro-text h1, .intro-text h2 {
@@ -124,13 +128,27 @@
 }
 
 @media (max-width: 421px) {
-
     #mission {
         font-size: 1.3rem;
         font-weight: 700;
     }
-    
+
     .intro-text {
         font-size: 1.1rem;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 250px;
+        transform: none;
+    }
+
+    .card:hover {
+        transform: rotateY(180deg);
     }
 }

@@ -57,9 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Animáció görgetés hatására
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
+        if (window.scrollY !== 0) {
             moveLogoToHeader();
         }
+    });
+    window.addEventListener('click', () => {
+        moveLogoToHeader();
+
     });
 
     function moveLogoToHeader() {

@@ -1,0 +1,65 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #555, #555);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.coming-soon-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.coming-soon {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFD700;
+    animation: pulse 1.5s ease-in-out infinite, textGlow 1.5s ease-in-out infinite;
+    margin: 0;
+    padding: 20px;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFA500, 0 0 50px #FFA500;
+    }
+    50% {
+        text-shadow: 0 0 15px #FFD700, 0 0 25px #FFD700, 0 0 35px #FFD700, 0 0 45px #FFA500, 0 0 60px #FFA500;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .coming-soon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon {
+        font-size: 2rem;
+    }
+}

@@ -1,21 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            if (!name || !email || !message) {
-                alert("Kérjük, töltse ki az összes mezőt!");
-            } else {
-                alert("Üzenet elküldve!");
-                form.submit();
-            }
-        });
-    }
 
     const animateElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
     animateElements.forEach(element => {
@@ -60,38 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Indításkor is ellenőrizze az elemeket
     fadeInOnScroll();
 });
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("myModal");
-    const closeBtn = document.querySelector(".close");
-    const form = document.getElementById("popupForm");
 
-    // Ellenőrizd, hogy a felhasználó az oldal aljára ért-e
-    window.addEventListener("scroll", function() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            modal.style.display = "block";
-        }
-    });
-
-    // Modal bezárása, ha a felhasználó a 'x' ikonra kattint
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    // Modal bezárása, ha a felhasználó az ablakon kívül kattint
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    // Form submit logika
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        // Add meg a form submit logikáját
-        alert("Form submitted!");
-        modal.style.display = "none";
-    });
-});
 document.addEventListener("DOMContentLoaded", function() {
     const logoContainer = document.querySelector('.brand-container');
     const headerLogoContainer = document.querySelector('.header-logo-container');

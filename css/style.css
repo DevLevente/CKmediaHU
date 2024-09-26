@@ -566,11 +566,13 @@ p.header {
 .left {
     background: linear-gradient(to right, #D4AA51, #202930);
     color: white;
+    border-radius: 20% 0% 0% 20%;
 }
 
 .right {
     background: linear-gradient(to right, #202930, #D4AA51);
     color: white;
+    border-radius: 0 20% 20% 0;
 }
 
 

@@ -1,34 +1,28 @@
-document.querySelectorAll('.video-container video').forEach(vid => {
-    vid.onclick = (event) => {
-        event.stopPropagation(); // Megakadályozza, hogy a kattintás felfelé terjedjen
-        const popupVid = document.querySelector('.popup-vid');
-        const popupVideoElement = popupVid.querySelector('video');
 
-        popupVid.style.display = 'block';
-        popupVid.style.zIndex = '1100'; // Magasabb z-index a navbarhoz képest
-        popupVideoElement.src = vid.getAttribute('src');
-        popupVideoElement.play(); // Elindítja a videót
-    };
-});
+window.onload = function() { // Videó automatikus indítása 5 másodperc késleltetéssel
+    const video = document.getElementById('vidi');
+    const countdown = document.getElementById('countdown');
+    let timeLeft = 5;
+    const countdownInterval = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = timeLeft;
 
-document.querySelector('.popup-vid span').onclick = () =>{
-    const popupVid = document.querySelector('.popup-vid');
-    const popupVideoElement = popupVid.querySelector('video');
+        if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            countdown.style.display = 'none'; // Visszaszámláló eltüntetése
+            video.play();
+        }
+    }, 1000);
 
-    popupVid.style.display = 'none';
-    popupVid.style.zIndex = '1000'; // Eredeti z-index visszaállítása
-    popupVideoElement.pause();
-    popupVideoElement.currentTime = 0;
-
-};
-
-document.querySelector('.popup-vid').onclick = (event) => {
-    const popupVideoElement = event.currentTarget.querySelector('video');
-
-    if (!event.target.closest('video')) {
-        event.currentTarget.style.display = 'none';
-        event.currentTarget.style.zIndex = '1000'; // Eredeti z-index visszaállítása
-        popupVideoElement.pause();
-        popupVideoElement.currentTime = 0;
-    }
-};
+// Mute/Unmute gomb működése
+    const muteButton = document.getElementById('muteButton');
+    muteButton.addEventListener('click', () => {
+        if (video.muted) {
+            video.muted = false;
+            muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+        } else {
+            video.muted = true;
+            muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        }
+    });
+}

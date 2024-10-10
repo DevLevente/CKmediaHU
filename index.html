@@ -73,7 +73,7 @@
 </nav>
 <main class="main">
     <div class="ures"></div>
-    <div class="gradient-background py-3 mb-5">
+    <div class="gradient-background py-3 mb-5 ">
         <section class="container brand-name poppins-extrabold fade-in">
             <h1 class="poppins-extrabold">Teljeskörű online </h1>
         </section>
@@ -81,19 +81,19 @@
             <h1 class="poppins-extrabold">marketing & tartalomgyártás!</h1>
         </section>
     </div>
+    <p id="demo"></p>
     <div class="containerf" >
         <div class="video-container">
+            <div id="countdown-container">
+                <div id="countdown">5</div>
+            </div>
             <div class="main-vid">
-                <video src="ck_anyagok/fooldal/csocsvideo.m4v" muted autoplay loop playsinline>
+                <video id="vidi" src="ck_anyagok/fooldal/csocsvideo.m4v" controls>
                     A böngésződ nem támogatja a videólejátszást.
                 </video>
+<!--                <button id="muteButton"><i class="fas fa-volume-up"></i></button>-->
+
             </div>
-        </div>
-        <div class="popup-vid">
-            <span>&times;</span>
-            <video controls src="ck_anyagok/fooldal/csocsvideo.m4v">
-                A böngésződ nem támogatja a videólejátszást.
-            </video>
         </div>
     </div>
 
@@ -113,18 +113,13 @@
     </section>
     <!--TikTok videók-->
     <section class="">
-        <section class="py-5">
-            <div class="tiktok-head">
-                <div class="tiktok-h-container">
-                    <h1 class="toktok-head">Csekkold a <span class="poppins-extrabold">legnagyobbat</span> ment TikTok videókat!👇🏻</h1>
-                </div>
-            </div>
+        <section class="py-2">
             <div class="sor tiktok-videos" style="--bs-gutter-x: 0">
                 <div class="col tiktok-container left" style="background-color:  #D4AA51;">
                     <h2 class="text-center poppins-extrabold">SolCar Hungary</h2>
                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@solcarhungary/video/7357697506710490400" data-video-id="7357697506710490400" style="max-width: 323px;min-width: 323px;" > <section> <a target="_blank" title="@solcarhungary" href="https://www.tiktok.com/@solcarhungary?refer=embed">@solcarhungary</a></section> </blockquote>
                 </div>
-                <div class="col tiktok-container mid" style="background-color: #202930; color: #D4AA51; border-radius: 20%;">
+                <div class="col tiktok-container mid">
                     <h2 class="text-center poppins-extrabold">Studio55 Szeged</h2>
                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@studio55_szeged/video/7361390827865689376" data-video-id="7361390827865689376" style="max-width: 323px;min-width: 323px;" > <section> <a target="_blank" title="@studio55_szeged" href="https://www.tiktok.com/@studio55_szeged?refer=embed">@studio55_szeged</a> </section> </blockquote>
                 </div>
@@ -136,9 +131,9 @@
         </section>
 
     <section class="">
-        <section class="py-5">
-            <div class="text-container text-center border-bottom pb-3">
-                <p class="header poppins-extrabold" style="font-size: 2.2rem;">Nincs időd posztolni? ⏰</p>
+        <section class="py-3">
+            <div class="text-container text-center border-bottom pb-3 px-4">
+                <p class="header poppins-extrabold">Nincs időd posztolni? ⏰</p>
                 <p class="header"><span class="poppins-extrabold" style="color: #D4AA51;">Bízd ránk a munkát</span> és mi profi flyereket készítünk, ütős szövegekkel, hogy a lehető leghatékonyabban szólítsuk meg a célközönségedet! </p>
             </div>
         <div class="sor">
@@ -155,7 +150,50 @@
                 <a href="https://www.facebook.com/story.php?story_fbid=1006532874618396&id=100057850790311&mibextid=WC7FNe&rdid=Bm2GSPKrN6bQcXE2" target="_blank"><img src="./ck_anyagok/fooldal/kepek/Studio55.PNG" alt="Studio55 post" height="350px" class="reference-img"></a>
             </div>
         </div>
-        </section>
+    </section>
+    <section class="container">
+        <div class="slider">
+            <div class="slide-track col">
+              <div class="slide">
+                <img src="./images/logos/Novotel_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/portless_logo_2 fehér.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/SOL_car_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/studio55_logo_okk_studio55_ok-3.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/Tapler Zita_fologo_feher.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/trianon_muzeum_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/Novotel_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/portless_logo_2 fehér.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/SOL_car_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/studio55_logo_okk_studio55_ok-3.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/Tapler Zita_fologo_feher.png" height="auto" width="60%" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./images/logos/trianon_muzeum_logo_white.png" height="auto" width="60%" alt="" />
+              </div>
+            </div>
+          </div>
+        
+    </section>
 </section>
 </main>
 <section class="col-lg-12">
@@ -213,24 +251,6 @@
         </div>
     </footer>
 
-
-
-<!--&lt;!&ndash; Modal &ndash;&gt;-->
-<!--<div id="myModal" class="modal">-->
-<!--    <div class="modal-content">-->
-<!--        <span class="close">&times;</span>-->
-<!--        <form id="popupForm">-->
-<!--            <h2>Kapcsolat</h2>-->
-<!--            <label for="name">Név:</label>-->
-<!--            <input type="text" id="name" name="name" required>-->
-<!--            <label for="email">Email:</label>-->
-<!--            <input type="email" id="email" name="email" required>-->
-<!--            <label for="message">Üzenet:</label>-->
-<!--            <textarea id="message" name="message" required></textarea>-->
-<!--            <button type="submit">Küldés</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</div>-->
 <script src="szkript/scrollbar.js"></script>
 <script src="szkript/script.js"></script>
 <script async src="https://www.tiktok.com/embed.js"></script>

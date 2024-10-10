@@ -128,7 +128,7 @@
     }
 }
 
-@media (max-width: 421px) {
+@media (max-width: 440px) {
     #mission {
         font-size: 1.1rem;
         font-weight: 500;
@@ -136,6 +136,7 @@
 
     .intro-text {
         font-size: 1.1rem;
+    
     }
 
     .card-container {

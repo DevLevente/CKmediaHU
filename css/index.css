@@ -137,7 +137,7 @@
     height: 70%;
     margin: auto;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     width: 100%;
 }

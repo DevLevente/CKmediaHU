@@ -2,7 +2,7 @@
 window.onload = function() { // Videó automatikus indítása 5 másodperc késleltetéssel
     const video = document.getElementById('vidi');
     const countdown = document.getElementById('countdown');
-    let timeLeft = 5;
+    let timeLeft = 3;
     const countdownInterval = setInterval(() => {
         timeLeft--;
         countdown.textContent = timeLeft;
